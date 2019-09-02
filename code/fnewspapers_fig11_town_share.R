@@ -1,14 +1,9 @@
-
-# source("./load_basedata.R")
-# source("./functions-data/newspaper_metadata_functions.R")
-# source("./functions-data/locations_functions.R")
-# source("./functions-data/provinciality_functions.R")
-# source("./functions-data/functions-common.R")
+# R version 3.4.3
+# author: Ville Vaara
 
 source("code/lib/functions_metadata.R")
 source("code/lib/functions_location.R")
 source("code/lib/functions_provinciality.R")
-# source("code/lib/functions_circulation.R")
 source("code/lib/functions_helpers.R")
 source("code/lib/functions_output.R")
 
