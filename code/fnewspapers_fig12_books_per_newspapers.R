@@ -116,7 +116,7 @@ locations_data <- read.csv("input/raw/publication_locations-utf8.csv")
 enriched_newspaper_metadata <- enrich_newspaper_metadata(newspaper_base_data)
 newspapers_subset <- subset(enriched_newspaper_metadata, AINYLEISMAARE == "SAN" & JULKAISUMAA == "FI" & KIELI == "fin")
 enriched_newspapers_locations_data <- enrich_locations_data(locations_data, newspapers_subset)
-fennicadata <- read.csv("input/processed/fennica_loc_and_time.csv", stringsAsFactors = FALSE)
+fennicadata <- read.csv("input/raw/fennica_loc_and_time.csv", stringsAsFactors = FALSE)
 
 # prepare plotdata
 start_year <- 1820

@@ -11,3 +11,7 @@ Unified data for Finnish newspapers:
   * based on [https://github.com/COMHIS/finnish-newspapers-data/originals/circulation090217/lehtien_levikki.zip/ilmestymispaikat.csv](https://github.com/COMHIS/finnish-newspapers-data/tree/master/originals/circulation090217)
 * [newspapers-utf8.csv](newspapers-utf8.csv): Newspaper bibliographic metadata provided by Finnish National Library.
   * based on [https://github.com/COMHIS/finnish-newspapers-data/originals/circulation090217/lehtien_levikki.zip/lehti.csv](https://github.com/COMHIS/finnish-newspapers-data/tree/master/originals/circulation090217)
+* [**fennica_loc_and_time.csv**](./fennica_loc_and_time.csv)
+  * based Finnish national bibliography datadump with columns _publication_place, publication_year, language.Finnish_ and _country_ selected.
+  * full Fennica data dump is available at [http://data.nationallibrary.fi/download/](http://data.nationallibrary.fi/download/)
+
