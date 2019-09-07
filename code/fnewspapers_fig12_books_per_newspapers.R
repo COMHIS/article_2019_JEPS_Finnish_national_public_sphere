@@ -109,8 +109,8 @@ get_books_per_paper_decade_plotdata <- function(newspapers_provinciality_plot_da
 }
 
 # Load data
-newspaper_base_data <- read.csv("input/raw/newspapers-utf8.csv")
-locations_data <- read.csv("input/raw/publication_locations-utf8.csv")
+newspaper_base_data <- read.csv("input/raw/finnish-newspapers-data/processed/newspapers-utf8.csv")
+locations_data <- read.csv("input/raw/finnish-newspapers-data/processed/publication_locations-utf8.csv")
 
 # Preprocess data
 enriched_newspaper_metadata <- enrich_newspaper_metadata(newspaper_base_data)
