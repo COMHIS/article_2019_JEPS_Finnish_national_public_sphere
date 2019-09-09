@@ -1,3 +1,0 @@
-[submodule "input/raw/finnish-newspapers-data"]
-	path = input/raw/finnish-newspapers-data
-	url = https://github.com/COMHIS/finnish-newspapers-data.git

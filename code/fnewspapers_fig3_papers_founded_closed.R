@@ -11,9 +11,9 @@ source("code/lib/functions_helpers.R")
 source("code/lib/functions_output.R")
 
 # Load data
-circulation_data <- read.csv("input/raw/finnish-newspapers-data/processed/circulation-utf8.csv")
-newspaper_base_data <- read.csv("input/raw/finnish-newspapers-data/processed/newspapers-utf8.csv")
-locations_data <- read.csv("input/raw/finnish-newspapers-data/processed/publication_locations-utf8.csv")
+circulation_data <- read.csv("input/raw/finnish-newspapers-data/processed/circulation-utf8.csv", stringsAsFactors = FALSE)
+newspaper_base_data <- read.csv("input/raw/finnish-newspapers-data/processed/newspapers-utf8.csv", stringsAsFactors = FALSE)
+locations_data <- read.csv("input/raw/finnish-newspapers-data/processed/publication_locations-utf8.csv", stringsAsFactors = FALSE)
 
 # Preprocess data
 enriched_circulation_data <- enrich_circulation_data(circulation_data)
@@ -31,7 +31,7 @@ old_and_new_plotdata$Difference <- old_and_new_plotdata$Founded + old_and_new_pl
 old_and_new_plotdata <- melt(old_and_new_plotdata, id = "Year")
 
 # Set visuals variables for plotting.
-background_events <- read.csv("input/raw/finnish-newspapers-data/processed/censorship_events.csv")
+background_events <- read.csv("input/raw/finnish-newspapers-data/processed/censorship_events.csv", stringsAsFactors = FALSE)
 # background_events$event <- factor(background_events$event,
 # levels = as.character(background_events$event))
 cbPalette <- c("#999999", "#E69F00", "#009E73", "#0072B2", "#D55E00", "#CC79A7", "#56B4E9", "#F0E442")
@@ -41,7 +41,7 @@ fill_pal <- c("#009E73", "#E69F00", "#999999")
 # Create plot
 start_vs_end_plot <- ggplot() +
   geom_rect(data = background_events,
-            mapping = aes(xmin = start, xmax = end, ymin = -Inf, ymax = Inf),
+            mapping = aes(xmin = start_year, xmax = end_year, ymin = -Inf, ymax = Inf),
             alpha = 0.2, size = 0) +
   geom_col(data = old_and_new_plotdata,
            aes(x = Year, y = value, fill = variable), colour="black") +
@@ -58,3 +58,4 @@ start_vs_end_plot <- ggplot() +
 
 # Save plot
 save_plot_png(plot = start_vs_end_plot, plotname = "fig3_newspapers_founded_closed", size_preset = "large")
+
