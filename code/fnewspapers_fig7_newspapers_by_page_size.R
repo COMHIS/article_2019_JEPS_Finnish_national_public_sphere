@@ -15,7 +15,7 @@ library(ggplot2)
 ggplot(npsizesbyyear,aes(x=year,y=percentage,group=size,fill=size)) + geom_bar(stat="identity")
 
 npsizes <- read.csv("input/raw/finnish-newspapers-data/processed/npsizes.csv")  %>% left_join(read.csv("input/raw/finnish-newspapers-data/processed/npissues.csv"))
-npsizes <- npsizes %>% mutate(year = as.numeric(substr(date,1,4)), area = width*height)
+npsizes <- npsizes %>% mutate(year = as.numeric(substr(date,1,4)), area = width*height/100)
 
 npsizemareabyyear <- npsizes %>% filter(year<=eyearL,year>=byearL) %>% group_by(ISSN,year) %>% summarise(aarea=mean(area))
 
