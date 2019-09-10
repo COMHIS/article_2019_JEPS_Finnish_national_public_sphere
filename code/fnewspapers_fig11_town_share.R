@@ -139,7 +139,7 @@ top10_newspapers_provinciality_plot_proportional <-
   get_newspaper_provincility_plot_proportional(top10_newspapers_provinciality_plot_data)
 
 # Check plot in RStudio
-top10_newspapers_provinciality_plot
+top10_newspapers_provinciality_plot_proportional
 
 # Save plot
 save_plot_png(plot = top10_newspapers_provinciality_plot_proportional, plotname = "fig11_newspapers_by_location", size_preset = "large")
