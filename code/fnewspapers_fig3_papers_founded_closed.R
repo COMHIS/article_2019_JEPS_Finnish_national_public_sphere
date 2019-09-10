@@ -30,6 +30,9 @@ old_and_new_plotdata$Closed <- old_and_new_plotdata$Closed * (-1)
 old_and_new_plotdata$Difference <- old_and_new_plotdata$Founded + old_and_new_plotdata$Closed
 old_and_new_plotdata <- melt(old_and_new_plotdata, id = "Year")
 
+diffdata <- old_and_new_plotdata
+diffdata <- diffdata[which(diffdata$variable == "Difference"),]
+
 # Set visuals variables for plotting.
 background_events <- read.csv("input/raw/finnish-newspapers-data/processed/censorship_events.csv", stringsAsFactors = FALSE)
 # background_events$event <- factor(background_events$event,
@@ -43,8 +46,11 @@ start_vs_end_plot <- ggplot() +
   geom_rect(data = background_events,
             mapping = aes(xmin = start_year, xmax = end_year, ymin = -Inf, ymax = Inf),
             alpha = 0.2, size = 0) +
-  geom_col(data = old_and_new_plotdata,
+  geom_col(data = old_and_new_plotdata, position = "identity",
            aes(x = Year, y = value, fill = variable), colour="black") +
+  geom_line(data = diffdata,
+            aes(x = Year, y = value), # , colour = "Diffence"
+            size = 1) +
   scale_fill_manual(values = fill_pal) +
   theme_gray() +
   scale_x_continuous(breaks = seq(1800, 1920, by=10)) +
@@ -54,7 +60,7 @@ start_vs_end_plot <- ggplot() +
   labs(x = "Year", y = "Founded and closed papers", fill = "Event:")
 
 # Check plot in R-Studio ...
-# start_vs_end_plot
+start_vs_end_plot
 
 # Save plot
 save_plot_png(plot = start_vs_end_plot, plotname = "fig3_newspapers_founded_closed", size_preset = "large")
