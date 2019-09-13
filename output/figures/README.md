@@ -1,6 +1,6 @@
 # output/figures/
 
-* [**Figure 1:**](https://raw.githubusercontent.com/COMHIS/article_2019_JEPS_Finnish_national_public_sphere/master/output/figures/fig1_number_of_newspapers_by_language.png) 1Distinct newspapers published per year in Swedish and in Finnish, 1800–1917
+* [**Figure 1:**](https://raw.githubusercontent.com/COMHIS/article_2019_JEPS_Finnish_national_public_sphere/master/output/figures/fig1_number_of_newspapers_by_language.png) Distinct newspapers published per year in Swedish and in Finnish, 1800–1917
 * [**Figure 2:**](https://raw.githubusercontent.com/COMHIS/article_2019_JEPS_Finnish_national_public_sphere/master/output/figures/fig2_words_by_lang.png) Words published in Finnish-language and Swedish-language newspapers in Finland, 1771–1905
 * [**Figure 3:**](https://raw.githubusercontent.com/COMHIS/article_2019_JEPS_Finnish_national_public_sphere/master/output/figures/fig3_newspapers_founded_closed.png) The founding of new newspapers and the closing of existing ones, 1810–1920
 * [**Figure 4:**](https://raw.githubusercontent.com/COMHIS/article_2019_JEPS_Finnish_national_public_sphere/master/output/figures/fig4_circulation_fin_swe.png) The circulation of Finnish and Swedish newspapers per year
